@@ -9,7 +9,7 @@
         <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Admin</title>
+        <title>Edusmile</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
@@ -30,9 +30,92 @@
                         <div class="menu__icon"> <i data-lucide="home"></i> </div>
                         <div class="menu__title"> Dashboard</div>
                     </a>
-                    
+                <li class="menu__devider my-6"></li>
+                <li>
+                            <div class="menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
+                            <b>PROFILE</b>
+                            </div>
+                    </li>
                 </li>
                 <li>
+                        <a href="side-menu-light-inbox.html" class="menu">
+                            <div class="menu__icon"> <i data-lucide="settings"></i> </div>
+                            <div class="menu__title"> Setting Profile </div>
+                        </a>
+                    </li>
+                    <li class="menu__devider my-6"></li>
+                    <li>
+                            <div class="menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
+                            <b>MANAJEMEN</b>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-lucide="sidebar"></i> </div>
+                            <div class="menu__title">
+                                Manajemen Sistem 
+                                <div class="menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="index.html" class="menu">
+                                    <div class="menu__icon"></div>
+                                    <div class="menu__title"> Manajemen Hak Akses </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple-menu-light-dashboard-overview-1.html" class="menu">
+                                    <div class="menu__icon"></div>
+                                    <div class="menu__title"> Manajemen Menu </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="side-menu-light-inbox.html" class="menu">
+                            <div class="menu__icon"> <i data-lucide="settings"></i> </div>
+                            <div class="menu__title"> Konfigurasi Email </div>
+                        </a>
+                    </li>
+                    <li class="menu__devider my-6"></li>
+                    <li>
+                            <div class="menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
+                            <b>ADMIN</b>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-lucide="sidebar"></i> </div>
+                            <div class="menu__title">
+                                Manajemen User
+                                <div class="menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="index.html" class="menu">
+                                    <div class="menu__icon"></div>
+                                    <div class="menu__title"> Data User </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple-menu-light-dashboard-overview-1.html" class="menu">
+                                    <div class="menu__icon"></div>
+                                    <div class="menu__title"> Tambah Walisiswa </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__devider my-6"></li>
+                    <li>
+                        <a href="side-menu-light-inbox.html" class="menu">
+                            <div class="menu__icon"> <i data-lucide="log-out"></i> </div>
+                            <div class="menu__title"> Logout </div>
+                        </a>
+                    </li>
+
+                <!-- <li>
                     <a href="javascript:;" class="menu">
                         <div class="menu__icon"> <i data-lucide="box"></i> </div>
                         <div class="menu__title"> Menu Layout <i data-lucide="chevron-down" class="menu__sub-icon "></i> </div>
@@ -539,7 +622,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- END: Mobile Menu -->
@@ -553,7 +636,7 @@
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="javascript:;.html" class="side-menu side-menu--active">
+                        <a href="/" class="side-menu side-menu--active">
                             <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
@@ -564,7 +647,7 @@
                     <li class="side-nav__devider my-6"></li>
                     <li>
                             <div class="side-menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
-                            <b>Profile</b>
+                            <b>PROFILE</b>
                             </div>
                     </li>
                     <li>
@@ -576,12 +659,12 @@
                     <li class="side-nav__devider my-6"></li>
                     <li>
                             <div class="side-menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
-                            <b>Manajemen</b>
+                            <b>MANAJEMEN</b>
                             </div>
                     </li>
                     <li>
                         <a href="javascript:;" class="side-menu">
-                            <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                            <div class="side-menu__icon"> <i data-lucide="sidebar"></i> </div>
                             <div class="side-menu__title">
                                 Manajemen Sistem 
                                 <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
@@ -590,19 +673,61 @@
                         <ul class="">
                             <li>
                                 <a href="index.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Manajemen Hak Akses </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
-                                    <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                                    <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Manajemen Menu </div>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
+                        <a href="side-menu-light-inbox.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-lucide="settings"></i> </div>
+                            <div class="side-menu__title"> Konfigurasi Email </div>
+                        </a>
+                    </li>
+                    <li class="side-nav__devider my-6"></li>
+                    <li>
+                            <div class="side-menu__title ml-5 mb-3" style="font-size: 16px; color:white;">
+                            <b>ADMIN</b>
+                            </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="side-menu">
+                            <div class="side-menu__icon"> <i data-lucide="sidebar"></i> </div>
+                            <div class="side-menu__title">
+                                Manajemen User
+                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="index.html" class="side-menu">
+                                    <div class="side-menu__icon"></div>
+                                    <div class="side-menu__title"> Data User </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
+                                    <div class="side-menu__icon"></div>
+                                    <div class="side-menu__title"> Tambah Walisiswa </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="side-nav__devider my-6"></li>
+                    <li>
+                        <a href="side-menu-light-inbox.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-lucide="log-out"></i> </div>
+                            <div class="side-menu__title"> Logout </div>
+                        </a>
+                    </li>
+                    <!-- <li>
                         <a href="side-menu-light-inbox.html" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="inbox"></i> </div>
                             <div class="side-menu__title"> Inbox </div>
@@ -1128,7 +1253,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </nav>
             <!-- END: Side Menu -->

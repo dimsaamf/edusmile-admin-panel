@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layout.includedashboard')
 @section('content')
 <div class="content">
                 <!-- BEGIN: Top Bar -->
