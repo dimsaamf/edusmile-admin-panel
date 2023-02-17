@@ -109,10 +109,14 @@
                     </li>
                     <li class="menu__devider my-6"></li>
                     <li>
-                        <a href="side-menu-light-inbox.html" class="menu">
+                        <a href="{{ route('logout') }}" class="menu" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"> 
                             <div class="menu__icon"> <i data-lucide="log-out"></i> </div>
-                            <div class="menu__title"> Logout </div>
+                            <div class="menu__title"> {{ __('Logout') }} </div>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                     </li>
 
                 <!-- <li>
@@ -722,10 +726,14 @@
                     </li>
                     <li class="side-nav__devider my-6"></li>
                     <li>
-                        <a href="side-menu-light-inbox.html" class="side-menu">
+                        <a href="{{ route('logout') }}" class="side-menu" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                             <div class="side-menu__icon"> <i data-lucide="log-out"></i> </div>
-                            <div class="side-menu__title"> Logout </div>
+                            <div class="side-menu__title"> {{ __('Logout') }}</div>
                         </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                     </li>
                     <!-- <li>
                         <a href="side-menu-light-inbox.html" class="side-menu">

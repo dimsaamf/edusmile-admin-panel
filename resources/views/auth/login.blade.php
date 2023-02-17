@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Login - Midone - Tailwind HTML Admin Template</title>
+        <title>Login</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="hidden xl:flex flex-col min-h-screen">
                     <a href="" class="-intro-x flex items-center pt-5">
                         <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/logo.svg">
-                        <span class="text-white text-lg ml-3"> Rubick </span> 
+                        <span class="text-white text-lg ml-3"> Edusmile </span> 
                     </a>
                     <div class="my-auto">
                         <img alt="Midone - HTML Admin Template" class="-intro-x w-1/2 -mt-16" src="dist/images/illustration.svg">
@@ -48,7 +48,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="h-screen xl:h-auto flex py-5 xl:py-0 my-10 xl:my-0">
                     <div class="my-auto mx-auto xl:ml-20 bg-white dark:bg-darkmode-600 xl:bg-transparent px-5 sm:px-8 py-8 xl:p-0 rounded-md shadow-md xl:shadow-none w-full sm:w-3/4 lg:w-2/4 xl:w-auto">
                         <h2 class="intro-x font-bold text-2xl xl:text-3xl text-center xl:text-left">
-                            Sign In
+                            Log In
                         </h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -69,7 +69,6 @@ License: You must have a valid license purchased only from themeforest(the above
                         </div>
                         <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
                             <button class="btn btn-primary py-3 px-4 w-full xl:w-32 xl:mr-3 align-top" href="{{ route('login') }}" type="submit">{{ __('Login') }}</button>
-                            <button class="btn btn-outline-secondary py-3 px-4 w-full xl:w-32 mt-3 xl:mt-0 align-top">{{ __('Register') }}</button>
                         </div>
 </form>
                     </div>
