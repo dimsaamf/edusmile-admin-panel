@@ -655,10 +655,27 @@
                             </div>
                     </li>
                     <li>
-                        <a href="side-menu-light-inbox.html" class="side-menu">
+                        <a href="javascript:;" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="settings"></i> </div>
-                            <div class="side-menu__title"> Setting Profile </div>
+                            <div class="side-menu__title">
+                                Setting Profile 
+                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                            </div>
                         </a>
+                        <ul class="">
+                            <li>
+                                <a href="index.html" class="side-menu">
+                                    <div class="side-menu__icon"></div>
+                                    <div class="side-menu__title"> Ubah Password </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
+                                    <div class="side-menu__icon"></div>
+                                    <div class="side-menu__title"> Ubah Profile Picture </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="side-nav__devider my-6"></li>
                     <li>
@@ -1269,17 +1286,12 @@
             @yield('content')
             <!-- END: Content -->
         </div>
-        <!-- BEGIN: Dark Mode Switcher-->
-        <div data-url="side-menu-dark-dashboard-overview-1.html" class="dark-mode-switcher cursor-pointer shadow-md fixed bottom-0 right-0 box border rounded-full w-40 h-12 flex items-center justify-center z-50 mb-10 mr-10">
-            <div class="mr-4 text-slate-600 dark:text-slate-200">Dark Mode</div>
-            <div class="dark-mode-switcher__toggle border"></div>
-        </div>
-        <!-- END: Dark Mode Switcher-->
         
         <!-- BEGIN: JS Assets-->
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
         <script src="dist/js/app.js"></script>
+        @include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
         <!-- END: JS Assets-->
     </body>
 </html>

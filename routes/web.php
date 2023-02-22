@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::group(['middleware' => 'revalidate'], function(){
+    Auth::routes();
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::controller(ProfileController::class)->group(function(){
+        Route::get('/editprofilepicture', 'EditProfilePicture')->name('profile.picture');
+    });
 });
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
