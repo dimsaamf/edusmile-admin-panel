@@ -24,6 +24,7 @@ Route::group(['middleware' => 'revalidate'], function(){
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::controller(ProfileController::class)->group(function(){
-        Route::get('/editprofilepicture', 'EditProfilePicture')->name('profile.picture');
+        Route::post('/editprofilepicture', 'EditProfilePicture')->name('profile.picture');
+        Route::get('/editprofilepicture', 'index')->name('picture');
     });
 });

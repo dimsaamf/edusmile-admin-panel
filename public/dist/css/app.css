@@ -18301,3 +18301,10 @@ html body {
     color: rgb(var(--color-success) / var(--tw-text-opacity));
   }
 }
+.footer {
+  border-top: 1px ;
+  padding: 15px;
+  width: 1350px;
+  margin-top: 150px;
+}
+

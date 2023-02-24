@@ -11,8 +11,6 @@
                         </ol>
                     </nav>
                     <!-- END: Breadcrumb -->
-                    <!-- BEGIN: Search -->
-                    <!-- END: Search -->
                     <!-- BEGIN: Notifications -->
                     <div class="intro-x dropdown mr-auto sm:mr-6">
                         <div class="dropdown-toggle notification notification--bullet cursor-pointer" role="button" aria-expanded="false" data-tw-toggle="dropdown"> <i data-lucide="bell" class="notification__icon dark:text-slate-500"></i> </div>
@@ -39,7 +37,7 @@
                     <!-- BEGIN: Account Menu -->
                     <div class="intro-x dropdown w-8 h-8">
                         <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in" role="button" aria-expanded="false" data-tw-toggle="dropdown">
-                            <img alt="Midone - HTML Admin Template" src="dist/images/profile-13.jpg">
+                            <img alt="Midone - HTML Admin Template" src="/avatars/{{ Auth::user()->avatar }}">
                         </div>
                         <div class="dropdown-menu w-56">
                             <ul class="dropdown-content bg-primary text-white">
@@ -51,7 +49,7 @@
                                     <hr class="dropdown-divider border-white/[0.08]">
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="settings" class="w-4 h-4 mr-2"></i> Setting Profile </a>
+                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="settings" class="w-4 h-4 mr-2"></i> Ubah Password </a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider border-white/[0.08]">
@@ -390,8 +388,8 @@
                     </div>
                     
                 </div>
-                <footer class="footer text-center text-muted mt-5">
-  All Rights Reserved by Adminmart. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
-</footer>
+                <div class="intro-y col-span-12 lg:col-span-12 text-center text-muted mt-5" style="border-top: 1px ; margin-top: 150px;">
+                    All Rights Reserved by Adminmart. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
+                </div>
             </div>
 @endsection
