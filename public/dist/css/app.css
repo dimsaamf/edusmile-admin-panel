@@ -633,8 +633,9 @@ select {
   padding-bottom: 1rem;
 }
 .alert.alert-dismissible {
-  padding-left: 1.25rem;
-  padding-right: 4rem;
+  
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .alert.alert-dismissible:not(.show) {
   display: none;

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -24,5 +26,32 @@ class ProfileController extends Controller
         Auth()->user()->update(['avatar'=>$avatarName]);
   
         return back()->with('success', 'Avatar updated successfully.');
+    }
+
+    public function ChangePassword()
+    {
+        return view('admin.profile.password');
+    }
+
+    public function UpdatePassword(Request $request)
+    {
+        $validateData = $request->validate([
+            'oldpassword' => 'required',
+            'newpassword' => 'required',
+            'confirm_password' => 'required|same:newpassword',
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->oldpassword,$hashedPassword)) {
+            $users = User::find(Auth::id());
+            $users->password = bcrypt($request->newpassword);
+            $users->save();
+
+            Alert::success('Berhasil', 'Password Berhasil diubah');
+            return redirect()->back();
+        } else {
+            Alert::error('Gagal', 'Password Lama salah');
+            return redirect()->back();
+        }
     }
 }

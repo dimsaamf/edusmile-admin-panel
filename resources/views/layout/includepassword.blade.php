@@ -640,7 +640,7 @@
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                        <a href="{{ route('dashboard') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
@@ -664,13 +664,13 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('password') }}" class="side-menu">
+                                <a href="index.html" class="side-menu side-menu--active">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Ubah Password </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('picture') }}" class="side-menu">
+                                <a href="{{ route('picture') }}" class="side-menu ">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Ubah Profile Picture </div>
                                 </a>

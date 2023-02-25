@@ -1,5 +1,6 @@
-@extends('layout.includeeditprofilepicture')
+@extends('layout.includepassword')
 @section('content')
+
 <div class="content">
                 <!-- BEGIN: Top Bar -->
                 <div class="top-bar">
@@ -7,7 +8,7 @@
                     <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Application</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Ubah Profile Picture</li>
+                            <li class="breadcrumb-item active" aria-current="page">Ubah Password</li>
                         </ol>
                     </nav>
                     <!-- END: Breadcrumb -->
@@ -17,19 +18,7 @@
                         <div class="notification-content pt-2 dropdown-menu">
                             <div class="notification-content__box dropdown-content">
                                 <div class="notification-content__title">Notifications</div>
-                                <div class="cursor-pointer relative flex items-center ">
-                                    <div class="w-12 h-12 flex-none image-fit mr-1">
-                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="dist/images/profile-6.jpg">
-                                        <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
-                                    </div>
-                                    <div class="ml-2 overflow-hidden">
-                                        <div class="flex items-center">
-                                            <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a> 
-                                            <div class="text-xs text-slate-400 ml-auto whitespace-nowrap">01:10 PM</div>
-                                        </div>
-                                        <div class="w-full truncate text-slate-500 mt-0.5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -67,42 +56,43 @@
                     <!-- END: Account Menu -->
                 </div>
                 <!-- END: Top Bar -->
-                <div class="grid grid-cols-12 gap-9 mt-5">
+                <div class="grid grid-cols-12 gap-12 mt-5">
                     <div class="intro-y col-span-12 lg:col-span-12">
                         <!-- BEGIN: Input -->
                         <div class="intro-y box">
                             <div class="flex flex-col sm:flex-row items-center p-5 border-b border-slate-200/60 dark:border-darkmode-400">
                                 <h2 class="font-medium text-base mr-auto">
-                                    Ubah Profile Picture
+                                    Ubah Password
                                 </h2>
                             </div>
-                            <form method="POST" action="{{ route ('profile.picture') }}" enctype="multipart/form-data">
+
+                            @if(count($errors))
+                                @foreach ($errors->all() as $error)
+                                <p class="alert alert-danger alert-dismissible fade show"> {{$error}}</p>
+                                @endforeach
+
+                            @endif
+
+                            <form method="POST" action="{{ route ('update.password') }}">
                                 @csrf
-                            <div class="p-5">
-                            <div class="w-52 mx-auto xl:mr-0 xl:ml-6">
-                                        <div class="border-2 border-dashed shadow-sm border-slate-200/60 dark:border-darkmode-400 rounded-md p-5">
-                                            <div class="h-40 relative image-fit cursor-pointer zoom-in mx-auto">
-                                                <img class="rounded-md" alt="Midone - HTML Admin Template" src="/avatars/{{ Auth::user()->avatar }}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                <div class="preview ml-5 mt-5">
+                            <div id="input" class="p-5">
+                                <div class="preview">
                                     <div>
-                                        <label for="picture" class="form-label ml-2">Ubah Profile Picture</label>
-                                        <input id="avatar" name="avatar" type="file" class="form-control ml-2 @error('avatar') is-invalid @enderror" value="{{ old('avatar') }}" required autocomplete="avatar">
-                                        @error('avatar')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                        <label for="regular-form-1" class="form-label">Password Lama</label>
+                                        <input name="oldpassword" id="oldpassword" type="password" class="form-control" placeholder="Tuliskan Password Lama Anda Disini">
                                     </div>
-                                    <button type="submit" class="btn btn-primary mt-5 ml-1">
-                                    {{ __('Upload Profile') }}
-                                </button>
-                                    
-                                </div>
+                                    <div>
+                                        <label for="regular-form-1" class="form-label mt-5">Password Baru</label>
+                                        <input name="newpassword" id="newpassword" type="password" class="form-control" placeholder="Tuliskan Password Baru Anda Disini">
+                                    </div>
+                                    <div>
+                                        <label for="regular-form-1" class="form-label mt-5">Ulangi Password Baru</label>
+                                        <input name="confirm_password" id="confirm_password" type="password" class="form-control" placeholder="Tuliskan Kembali Password Baru Anda Disini">
+                                    </div>
+                                </div> 
+                                <input type ="submit" class="btn btn-primary waves-effect waves-light mt-5" value="Ubah Password">
                             </div>
-                            </form> 
+                            </form>
                         </div>
                         <!-- END: Input -->
                     </div>
@@ -111,6 +101,4 @@
                     All Rights Reserved by Adminmart. Designed and Developed by <a href="https://wrappixel.com">WrapPixel</a>.
                 </div>
             </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 @endsection

@@ -26,5 +26,7 @@ Route::group(['middleware' => 'revalidate'], function(){
     Route::controller(ProfileController::class)->group(function(){
         Route::post('/editprofilepicture', 'EditProfilePicture')->name('profile.picture');
         Route::get('/editprofilepicture', 'index')->name('picture');
+        Route::get('/editpasword', 'ChangePassword')->name('password');
+        Route::post('/updatepassword', 'UpdatePassword')->name('update.password');
     });
 });
