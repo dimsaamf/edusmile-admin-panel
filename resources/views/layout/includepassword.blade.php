@@ -688,23 +688,8 @@
                             <div class="side-menu__icon"> <i data-lucide="sidebar"></i> </div>
                             <div class="side-menu__title">
                                 Manajemen Sistem 
-                                <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
                             </div>
                         </a>
-                        <ul class="">
-                            <li>
-                                <a href="index.html" class="side-menu">
-                                    <div class="side-menu__icon"></div>
-                                    <div class="side-menu__title"> Manajemen Hak Akses </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="simple-menu-light-dashboard-overview-1.html" class="side-menu">
-                                    <div class="side-menu__icon"></div>
-                                    <div class="side-menu__title"> Manajemen Menu </div>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="side-menu-light-inbox.html" class="side-menu">
