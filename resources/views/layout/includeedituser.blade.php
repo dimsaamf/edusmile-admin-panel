@@ -1,17 +1,18 @@
 
+
 <!DOCTYPE html>
 <html lang="en" class="light">
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <link href="{{asset('dist/images/logo.svg')}}" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Edusmile</title>
+        <title>Edusmile | Manajemen User</title>
         <!-- BEGIN: CSS Assets-->
-        <link rel="stylesheet" href="dist/css/app.css" />
+        <link rel="stylesheet" href="{{asset('dist/css/app.css')}}" />
         <!-- END: CSS Assets-->
     </head>
     <!-- END: Head -->
@@ -20,13 +21,13 @@
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+                    <img alt="Midone - HTML Admin Template" class="w-6" src="{{asset('dist/images/logo.svg')}}">
                 </a>
                 <a href="javascript:;" id="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
             <ul class="border-t border-white/[0.08] py-5 hidden">
                 <li>
-                    <a href="{{ route('dashboard') }}" class="menu menu--active">
+                    <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-lucide="home"></i> </div>
                         <div class="menu__title"> Dashboard</div>
                     </a>
@@ -125,13 +126,13 @@
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
-                    <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+                    <img alt="Midone - HTML Admin Template" class="w-6" src="{{asset('dist/images/logo.svg')}}">
                     <span class="hidden xl:block text-white text-lg ml-3"> EduSmile </span> 
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                        <a href="{{ route('dashboard') }}" class="side-menu ">
                             <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
@@ -204,7 +205,7 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('users.index') }}" class="side-menu">
+                                <a href="{{ route('users.index') }}" class="side-menu side-menu--active">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Data User </div>
                                 </a>
@@ -239,7 +240,7 @@
         <!-- BEGIN: JS Assets-->
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
-        <script src="dist/js/app.js"></script>
+        <script src="{{asset('dist/js/app.js')}}"></script>
         @include('sweetalert::alert', ['cdn'=>"https://cdn.jsdelivr.net/npm/sweetalert2@9"])
         <!-- END: JS Assets-->
     </body>

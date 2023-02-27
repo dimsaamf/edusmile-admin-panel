@@ -9,7 +9,7 @@
         <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
         <meta name="keywords" content="admin template, Midone Admin Template, dashboard template, flat admin template, responsive admin template, web app">
         <meta name="author" content="LEFT4CODE">
-        <title>Edusmile</title>
+        <title>Edusmile | Manajemen User</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
@@ -26,7 +26,7 @@
             </div>
             <ul class="border-t border-white/[0.08] py-5 hidden">
                 <li>
-                    <a href="{{ route('dashboard') }}" class="menu menu--active">
+                    <a href="{{ route('dashboard') }}" class="menu">
                         <div class="menu__icon"> <i data-lucide="home"></i> </div>
                         <div class="menu__title"> Dashboard</div>
                     </a>
@@ -131,7 +131,7 @@
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="{{ route('dashboard') }}" class="side-menu side-menu--active">
+                        <a href="{{ route('dashboard') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
@@ -161,7 +161,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('picture') }}" class="side-menu">
+                                <a href="{{ route('picture') }}" class="side-menu ">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Ubah Profile Picture </div>
                                 </a>
@@ -204,7 +204,7 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="{{ route('users.index') }}" class="side-menu">
+                                <a href="{{ route('users.index') }}" class="side-menu side-menu--active">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Data User </div>
                                 </a>

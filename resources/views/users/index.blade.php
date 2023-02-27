@@ -1,4 +1,4 @@
-@extends('layout.includemanajemen')
+@extends('layout.includeuser')
 @section('content')
 <div class="content">
                 <!-- BEGIN: Top Bar -->
