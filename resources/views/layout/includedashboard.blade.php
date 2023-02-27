@@ -684,7 +684,7 @@
                             </div>
                     </li>
                     <li>
-                        <a href="javascript:;" class="side-menu">
+                        <a href="{{ route('roles.index') }}" class="side-menu">
                             <div class="side-menu__icon"> <i data-lucide="sidebar"></i> </div>
                             <div class="side-menu__title">
                                 Manajemen Sistem 
@@ -713,7 +713,7 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="index.html" class="side-menu">
+                                <a href="{{ route('users.index') }}" class="side-menu">
                                     <div class="side-menu__icon"></div>
                                     <div class="side-menu__title"> Data User </div>
                                 </a>

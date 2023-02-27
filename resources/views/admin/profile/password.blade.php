@@ -7,7 +7,7 @@
                     <!-- BEGIN: Breadcrumb -->
                     <nav aria-label="breadcrumb" class="-intro-x mr-auto hidden sm:flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Application</a></li>
+                            <li class="breadcrumb-item">Hei {{ Auth::user()->name }}!</li>
                             <li class="breadcrumb-item active" aria-current="page">Ubah Password</li>
                         </ol>
                     </nav>
@@ -18,7 +18,19 @@
                         <div class="notification-content pt-2 dropdown-menu">
                             <div class="notification-content__box dropdown-content">
                                 <div class="notification-content__title">Notifications</div>
-                                
+                                <div class="cursor-pointer relative flex items-center ">
+                                    <div class="w-12 h-12 flex-none image-fit mr-1">
+                                        <img alt="Midone - HTML Admin Template" class="rounded-full" src="dist/images/profile-6.jpg">
+                                        <div class="w-3 h-3 bg-success absolute right-0 bottom-0 rounded-full border-2 border-white dark:border-darkmode-600"></div>
+                                    </div>
+                                    <div class="ml-2 overflow-hidden">
+                                        <div class="flex items-center">
+                                            <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a> 
+                                            <div class="text-xs text-slate-400 ml-auto whitespace-nowrap">01:10 PM</div>
+                                        </div>
+                                        <div class="w-full truncate text-slate-500 mt-0.5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
