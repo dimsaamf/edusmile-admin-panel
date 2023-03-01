@@ -50,7 +50,7 @@
                                     <hr class="dropdown-divider border-white/[0.08]">
                                 </li>
                                 <li>
-                                    <a href="" class="dropdown-item hover:bg-white/5"> <i data-lucide="settings" class="w-4 h-4 mr-2"></i> Ubah Password </a>
+                                    <a href="{{ route('password') }}" class="dropdown-item hover:bg-white/5"> <i data-lucide="settings" class="w-4 h-4 mr-2"></i> Ubah Password </a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider border-white/[0.08]">

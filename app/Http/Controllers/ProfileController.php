@@ -9,6 +9,17 @@ use App\Models\User;
 
 class ProfileController extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    function __construct()
+    {
+         $this->middleware('permission:setting-profile', ['only' => ['index','EditProfilePicture','ChangePassword','UpdatePassword']]);
+    }
+
     public function index()
     {
         return view('admin.profile.picture');
